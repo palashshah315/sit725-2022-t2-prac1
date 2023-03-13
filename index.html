@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <title>My Title </title>
+    <meta charset="utf-8">
+    <meta view="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h3 class="text-center">SIT725 Applied Software Engineering</h3>
+
+    <p id="changetext" class="text-center">Click the button to change the text</p>
+    <button onclick="textChange()" class="button">Click Me To Change Text</button>
+    <script type="text/javascript">
+        function textChange() {
+            var words = ["Hello World!", "How are You!", "Random Text", "Changed Text", "Clicked a Button", "Lorem Ipsum"];
+
+            var indexNumber = randomValues(0, words.length - 1);
+
+            console.log("Index: ", indexNumber);
+
+            document.getElementById("changetext").innerHTML = words[indexNumber];
+        };
+
+        function randomValues(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+    </script>
+</body>
+
+</html>
